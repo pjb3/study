@@ -1,0 +1,4 @@
+1.  Yes, because my computer has 4 byte ints
+2.  Add the "long" storage modifier to the int variable declaration
+3.  %lu
+4.  math.h
