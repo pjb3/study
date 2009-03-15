@@ -1,0 +1,5 @@
+1.  Yes, numbers are constants
+2.  Yes, assignment is an expression
+3.  2methods, *start_function and .End_Exe are not
+4.  No, 2 + 5 * 2 is 2 + 10, 12, (2 + 5) * 2 is 7 * 2, 14
+5.  Yes, they are both 1
