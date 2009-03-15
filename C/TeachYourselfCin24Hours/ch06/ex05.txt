@@ -1,0 +1,1 @@
+= is the assignment operator.  x and y are assigned the value of 0, so then x = y just assigns 0 to x, and that expression yields 0

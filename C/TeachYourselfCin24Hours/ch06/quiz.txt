@@ -1,0 +1,7 @@
+1.  = is the assignment operator, which assigns the value on the right to the memory location of the variable on the left.  == is the equality operator, which return 1 if the right hand side value is equal to the left hand side value.
+
+2.  The - before the y and the z are unary minus operators, the - after the y is a subtraction operator.
+
+x / y yields 3, because it does integer truncation.  (float)x/y first casts x to a float, so then the operation returns a float, which is 3.75.
+
+4.  No, because y *= x + 5 is equivalent to y = y * (x + 5), which has a different precedence.

@@ -1,0 +1,1 @@
+1, because == has a higher precedence than *, first 3 * 6 yields 18, then 18 == 18 yields 1, and then that value is assigned to z
