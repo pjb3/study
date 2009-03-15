@@ -1,0 +1,1 @@
+The first loop will print 8 times, but the second will only print the final value, because there is a a semi-colon right after the for loop

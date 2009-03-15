@@ -1,0 +1,4 @@
+1.  No, because i is not less than 100
+2.  Yes, it will do one iteration in the loop, which will print the ASCII character with the value of 100, and then stop
+3.  yes
+4.  yes
