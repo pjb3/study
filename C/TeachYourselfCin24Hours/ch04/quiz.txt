@@ -1,0 +1,9 @@
+1.  Yes, they will both be one, because the fractional part in integer division is ignored
+2.  3001.0 and 3000.0
+3.  
+   3500 = 3.5e3
+ 0.0035 = 3.5e-3
+-0.0035 = -3.5e-3
+
+4.  No, 7th_calculation is not valid because it starts with a number, Tom's_method is not valid because it has an apostrophe
+

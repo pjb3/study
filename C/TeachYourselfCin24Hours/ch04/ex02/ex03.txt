@@ -1,0 +1,1 @@
+No, because it is greater than 2^15-1, which is 32767.

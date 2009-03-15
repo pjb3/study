@@ -1,0 +1,4 @@
+1.  Yes, adding a '-' after the '%', such as %-5d, does left align
+2.  putc() accepts the stream it should put the char to as an argument, whereas putchar() just uses stdout
+3.  getchar() returns an int, the number value of the character it got
+4.  10 is the minimum field width specifier and 3 is the precision specifier
