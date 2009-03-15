@@ -1,0 +1,1 @@
+main has to return an int, but there is no return statement

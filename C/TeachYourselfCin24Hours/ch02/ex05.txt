@@ -1,0 +1,1 @@
+printf will not be defined, so you need to include stdio.h to fix that.  main should return an int, not void
