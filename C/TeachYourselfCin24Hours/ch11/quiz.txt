@@ -1,0 +1,8 @@
+1.  &ch
+2.
+ - *ptr is a deref
+ - * is a multiply
+ - * is a multiply
+ - *y and *x are deref, * is multiply
+3.  ptr_int = 0x1A38, *ptr_int = 10
+4.  456
