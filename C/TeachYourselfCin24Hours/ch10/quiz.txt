@@ -1,0 +1,4 @@
+1.  No
+2.  2, but only because 4 -= 2 is 2, 2 *= 2 is 4, and 4 /= 2 is 2
+3.  2
+4.  27
