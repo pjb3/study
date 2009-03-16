@@ -1,0 +1,8 @@
+1.  Create an array of 4 integers and assign values
+2.  Arrays are zero-based index
+3.  
+ - 2
+ - 1
+ - 3
+ - 2
+4.  The rightmost array needs to specify the size, which is 2
