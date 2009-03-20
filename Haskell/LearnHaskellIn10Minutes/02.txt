@@ -1,0 +1,43 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> 3 * 5
+15
+Prelude> 4 ^ 2 - 1
+15
+Prelude> (1 - 5)^(3 * 2 - 4)
+16
+Prelude> "Hello"
+"Hello"
+Prelude> "Hello" ++ ", Haskell"
+"Hello, Haskell"
+Prelude> succ 5
+6
+Prelude> truncate 6.59
+6
+Prelude> round 6.59
+7
+Prelude> sqrt 2
+1.4142135623730951
+Prelude> not (5 < 3)
+True
+Prelude> gcd 21 14
+7
+Prelude> putStrLn "Hello, Haskell"
+Hello, Haskell
+Prelude> putStr "No newline"
+No newlinePrelude> print (5 + 4)
+9
+Prelude> print (1 < 2)
+True
+Prelude> do { putStr "2 + 2 = "; print (2 + 2) }
+2 + 2 = 4
+Prelude> do { putStrLn "ABCDE"; putStrLn "12345" }
+ABCDE
+12345
+Prelude> do { n <- readLn ; print (n^2) }
+4
+16
+Prelude> :quit
+Leaving GHCi.

@@ -1,0 +1,70 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> 5 :: Int
+5
+Prelude> 5 :: Double
+5.0
+Prelude> :t True
+True :: Bool
+Prelude> :t 'X'
+'X' :: Char
+Prelude> :t "Hello, Haskell"
+"Hello, Haskell" :: [Char]
+Prelude> :t 42
+42 :: (Num t) => t
+Prelude> :t 42.0
+42.0 :: (Fractional t) => t
+Prelude> :t gcd 15 20
+gcd 15 20 :: (Integral t) => t
+Prelude> gcd 42 53 :: Int
+1
+Prelude> gcd 42 35 :: Int
+7
+Prelude> gcd 42 35 :: Double
+
+<interactive>:1:0:
+    No instance for (Integral Double)
+      arising from a use of `gcd' at <interactive>:1:0-8
+    Possible fix: add an instance declaration for (Integral Double)
+    In the expression: gcd 42 35 :: Double
+    In the definition of `it': it = gcd 42 35 :: Double
+Prelude> ()
+()
+Prelude> :t ()
+() :: ()
+Prelude> [1, 2, 3]
+[1,2,3]
+Prelude> [1 .. 5]
+[1,2,3,4,5]
+Prelude> [1, 3 .. 10]
+[1,3,5,7,9]
+Prelude> [True, False, True]
+[True,False,True]
+Prelude> ['H', 'e', 'l', 'l', 'o']
+"Hello"
+Prelude> 'C' : ['H', 'e', 'l', 'l', 'o']
+"CHello"
+Prelude> (1, True)
+(1,True)
+Prelude> zip [1 .. 5] ['a' .. 'e']
+[(1,'a'),(2,'b'),(3,'c'),(4,'d'),(5,'e')]
+Prelude> :t ['a' .. 'c']
+['a' .. 'c'] :: [Char]
+Prelude> :t [('x', True), ('y', False)]
+[('x', True), ('y', False)] :: [(Char, Bool)]
+Prelude> [1 .. 5]
+[1,2,3,4,5]
+Prelude> map (+ 2) [1 .. 5]
+[3,4,5,6,7]
+Prelude> filter (> 2) [1 .. 5]
+[3,4,5]
+Prelude> fst (1, 2)
+1
+Prelude> snd (1, 2)
+2
+Prelude> map fst [(1, 2), (3, 4), (5, 6)]
+[1,3,5]
+Prelude> :quit
+Leaving GHCi.
