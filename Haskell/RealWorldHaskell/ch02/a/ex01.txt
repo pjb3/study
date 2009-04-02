@@ -1,0 +1,3 @@
+False :: Bool
+(["Foo", "bar"], 'a') :: ([[Char]], Char)
+[(True, []), (False, [['a']])] :: [(Bool, [Char])]

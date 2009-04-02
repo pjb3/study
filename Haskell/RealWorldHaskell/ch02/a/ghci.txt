@@ -1,0 +1,72 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> True && "false"
+
+<interactive>:1:8:
+    Couldn't match expected type `Bool' against inferred type `[Char]'
+    In the second argument of `(&&)', namely `"false"'
+    In the expression: True && "false"
+    In the definition of `it': it = True && "false"
+Prelude> :t 'a'
+'a' :: Char
+Prelude> 'a' :: Char
+'a'
+Prelude> [1,2,3] :: Int
+
+<interactive>:1:0:
+    Couldn't match expected type `Int' against inferred type `[a]'
+    In the expression: [1, 2, 3] :: Int
+    In the definition of `it': it = [1, 2, 3] :: Int
+Prelude> odd 3
+True
+Prelude> odd 6
+False
+Prelude> compare 2 3
+LT
+Prelude> compare 3 3
+EQ
+Prelude> compare 3 2
+GT
+Prelude> (compate 2 3) == LT
+
+<interactive>:1:1: Not in scope: `compate'
+Prelude> (compare 2 3) == LT
+True
+Prelude> compare 2 3 == LT
+True
+Prelude> head [1,2,3,4]
+1
+Prelude> head ['a','b',c']
+
+<interactive>:1:14: Not in scope: `c''
+Prelude> head ['a','b','c']
+'a'
+Prelude> tail [1,2,3,4]
+[2,3,4]
+Prelude> tail [2,3,4]
+[3,4]
+Prelude> tail [True,False]
+[False]
+Prelude> tail "list"
+"ist"
+Prelude> tail []
+*** Exception: Prelude.tail: empty list
+Prelude> :t [[True],[False,False]]
+[[True],[False,False]] :: [[Bool]]
+Prelude> (1964, "Labyrinths")
+(1964,"Labyrinths")
+Prelude> :t (True, "hello")
+(True, "hello") :: (Bool, [Char])
+Prelude> (4, ['a', 'm'], (16, True))
+(4,"am",(16,True))
+Prelude> :t (False, 'a')
+(False, 'a') :: (Bool, Char)
+Prelude> :t ('a', False)
+('a', False) :: (Char, Bool)
+Prelude> :type (Fale, 'a', 'b')
+
+<interactive>:1:1: Not in scope: data constructor `Fale'
+Prelude> :type (False, 'a', 'b')
+(False, 'a', 'b') :: (Bool, Char, Char)

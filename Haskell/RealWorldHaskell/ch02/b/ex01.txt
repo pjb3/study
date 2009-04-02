@@ -1,0 +1,1 @@
+This function takes a list of will return one of the elements in that list.  It cannot return values that are not in the list past to it, because at compile time, this is a generic type, so you can for example, try to take the last element from the list and multiply it by 2, because you don't know if the element will be a number.

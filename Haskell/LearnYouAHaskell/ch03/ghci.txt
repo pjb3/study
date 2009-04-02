@@ -1,0 +1,304 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> :t 'a'
+'a' :: Char
+Prelude> :t True
+True :: Bool
+Prelude> :t "HELLO!"
+"HELLO!" :: [Char]
+Prelude> :t (True, 'a')
+(True, 'a') :: (Bool, Char)
+Prelude> :t 4 == 5
+4 == 5 :: Bool
+Prelude> :load ch03.hs
+[1 of 1] Compiling Main             ( ch03.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :t removeNonUppercase
+removeNonUppercase :: [Char] -> [Char]
+*Main> :r
+[1 of 1] Compiling Main             ( ch03.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :t removeNonUppercase
+removeNonUppercase :: String -> String
+*Main> :r
+[1 of 1] Compiling Main             ( ch03.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :r
+[1 of 1] Compiling Main             ( ch03.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> factorial 50
+30414093201713378043612608166064768844377641568960512000000000000
+*Main> :r
+[1 of 1] Compiling Main             ( ch03.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> circumference 4.0
+25.132742
+*Main> circumference' 4.0
+
+<interactive>:1:0: Not in scope: `circumference''
+*Main> :r
+[1 of 1] Compiling Main             ( ch03.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> circumference' 4.0
+25.132741228718345
+*Main> :t head
+head :: [a] -> a
+*Main> :t fst
+fst :: (a, b) -> a
+*Main> :t (==)
+(==) :: (Eq a) => a -> a -> Bool
+*Main> 5 == 5
+True
+*Main> 5 /= 5
+False
+*Main> "Ho Ho" == "Ho Ho"
+True
+*Main> 3.432 == 3.432
+True
+*Main> :t (>)
+(>) :: (Ord a) => a -> a -> Bool
+*Main> :info Ord
+class (Eq a) => Ord a where
+  compare :: a -> a -> Ordering
+  (<) :: a -> a -> Bool
+  (>=) :: a -> a -> Bool
+  (>) :: a -> a -> Bool
+  (<=) :: a -> a -> Bool
+  max :: a -> a -> a
+  min :: a -> a -> a
+        -- Defined in GHC.Classes
+instance (Ord a) => Ord (Maybe a) -- Defined in Data.Maybe
+instance (Ord a, Ord b) => Ord (Either a b)
+  -- Defined in Data.Either
+instance Ord Integer -- Defined in GHC.Num
+instance Ord Float -- Defined in GHC.Float
+instance Ord Double -- Defined in GHC.Float
+instance Ord Bool -- Defined in GHC.Base
+instance Ord Ordering -- Defined in GHC.Base
+instance Ord Char -- Defined in GHC.Base
+instance (Ord a) => Ord [a] -- Defined in GHC.Base
+instance Ord Int -- Defined in GHC.Base
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i,
+          Ord j,
+          Ord k,
+          Ord l) =>
+         Ord (a, b, c, d, e, f, g, h, i, j, k, l)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i,
+          Ord j,
+          Ord k,
+          Ord l,
+          Ord m) =>
+         Ord (a, b, c, d, e, f, g, h, i, j, k, l, m)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i,
+          Ord j,
+          Ord k,
+          Ord l,
+          Ord m,
+          Ord n) =>
+         Ord (a, b, c, d, e, f, g, h, i, j, k, l, m, n)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i,
+          Ord j,
+          Ord k,
+          Ord l,
+          Ord m,
+          Ord n,
+          Ord o) =>
+         Ord (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o)
+  -- Defined in Data.Tuple
+instance (Ord a, Ord b) => Ord (a, b) -- Defined in Data.Tuple
+instance (Ord a, Ord b, Ord c) => Ord (a, b, c)
+  -- Defined in Data.Tuple
+instance (Ord a, Ord b, Ord c, Ord d) => Ord (a, b, c, d)
+  -- Defined in Data.Tuple
+instance (Ord a, Ord b, Ord c, Ord d, Ord e) => Ord (a, b, c, d, e)
+  -- Defined in Data.Tuple
+instance (Ord a, Ord b, Ord c, Ord d, Ord e, Ord f) =>
+         Ord (a, b, c, d, e, f)
+  -- Defined in Data.Tuple
+instance (Ord a, Ord b, Ord c, Ord d, Ord e, Ord f, Ord g) =>
+         Ord (a, b, c, d, e, f, g)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h) =>
+         Ord (a, b, c, d, e, f, g, h)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i) =>
+         Ord (a, b, c, d, e, f, g, h, i)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i,
+          Ord j) =>
+         Ord (a, b, c, d, e, f, g, h, i, j)
+  -- Defined in Data.Tuple
+instance (Ord a,
+          Ord b,
+          Ord c,
+          Ord d,
+          Ord e,
+          Ord f,
+          Ord g,
+          Ord h,
+          Ord i,
+          Ord j,
+          Ord k) =>
+         Ord (a, b, c, d, e, f, g, h, i, j, k)
+  -- Defined in Data.Tuple
+instance Ord () -- Defined in Data.Tuple
+*Main> :t Ord
+
+<interactive>:1:0: Not in scope: data constructor `Ord'
+*Main> :t Ordering
+
+<interactive>:1:0: Not in scope: data constructor `Ordering'
+*Main> :info Ordering
+data Ordering = LT | EQ | GT    -- Defined in GHC.Ordering
+instance Bounded Ordering -- Defined in GHC.Enum
+instance Enum Ordering -- Defined in GHC.Enum
+instance Eq Ordering -- Defined in GHC.Base
+instance Ord Ordering -- Defined in GHC.Base
+instance Read Ordering -- Defined in GHC.Read
+instance Show Ordering -- Defined in GHC.Show
+*Main> :t LT
+LT :: Ordering
+*Main> "Abrakababra" < "Zebra"
+True
+*Main> "Abrakababra" `compare` "Zebra"
+LT
+*Main> 5 >= 2
+True
+*Main> 5 `compare` 2
+GT
+*Main> show 3
+"3"
+*Main> show 5.334
+"5.334"
+*Main> show True
+"True"
+*Main> read "True" || False
+True
+*Main> read "8.2" + 3.8
+12.0
+*Main> read "5" - 2
+3
+*Main> read "[1,2,3,4]" ++ [3]
+[1,2,3,4,3]
+*Main> read "4"
+
+<interactive>:1:0:
+    Ambiguous type variable `a' in the constraint:
+      `Read a' arising from a use of `read' at <interactive>:1:0-7
+    Probable fix: add a type signature that fixes these type variable(s)
+*Main> :t read
+read :: (Read a) => String -> a
+*Main> read "5" :: Int
+5
+*Main> read "5" :: Float
+5.0
+*Main> (read "5" :: Float) * 4
+20.0
+*Main> read "[1,2,3,4]" :: [Int]
+[1,2,3,4]
+*Main> read "(3, 'a')" :: (Int, Char)
+(3,'a')
+*Main> ['a'..'e']
+"abcde"
+*Main> [LT..GT]
+
+<interactive>:1:1:
+    Failed to load interface for `LT':
+      Use -v to see a list of the files searched for.
+
+<interactive>:1:1:
+    A section must be enclosed in parentheses thus: (`LT..` GT)
+*Main> [LT .. GT]
+[LT,EQ,GT]
+*Main> [3 .. 5]
+[3,4,5]
+*Main> succ 'B'
+'C'
+*Main> minBound :: Int
+-2147483648
+*Main> maxBound :: Char
+'\1114111'
+*Main> maxBound :: Bool
+True
+*Main> minBound :: Bool
+False
+*Main> True > False
+True
+*Main> False > True
+False
+*Main> maxBound :: (Bool, Int, Char)
+(True,2147483647,'\1114111')
+*Main> :t 20
+20 :: (Num t) => t
+*Main> 20 :: Int
+20
+*Main> 20 :: Integer
+20
+*Main> 20 :: Float
+20.0
+*Main> 20 :: Double
+20.0
+*Main> :t (*)
+(*) :: (Num a) => a -> a -> a
+*Main> :q
+Leaving GHCi.

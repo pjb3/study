@@ -1,0 +1,50 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> :set +t
+Prelude> 5 + 8
+13
+it :: Integer
+Prelude> 3 * 5 + 8
+23
+it :: Integer
+Prelude> 2 + 4
+6
+it :: Integer
+Prelude> (+) 2 4
+6
+it :: Integer
+Prelude> sqrt 16
+4.0
+it :: Double
+Prelude> succ 6
+7
+it :: Integer
+Prelude> succ 7
+8
+it :: Integer
+Prelude> pred 9
+8
+it :: Integer
+Prelude> pred 8
+7
+it :: Integer
+Prelude> sin (pi / 2)
+1.0
+it :: Double
+Prelude> truncate pi
+3
+it :: Integer
+Prelude> round 3.5
+4
+it :: Integer
+Prelude> round 3.4
+3
+it :: Integer
+Prelude> floor 3.7
+3
+it :: Integer
+Prelude> ceiling 3.3
+4
+it :: Integer

@@ -1,0 +1,90 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> take 2 [1,2,3,4,5]
+[1,2]
+Prelude> drop 3 [1,2,3,4,5]
+[4,5]
+Prelude> fst (1,'a')
+1
+Prelude> snd (1,'a')
+'a'
+Prelude> head (drop 4 "azerty")
+'t'
+Prelude> head $ drop 4 "azerty"
+'t'
+Prelude> :type lines
+lines :: String -> [String]
+Prelude> lines "the quick\nbrown fox\n jumps"
+["the quick","brown fox"," jumps"]
+Prelude> :type readFile
+readFile :: FilePath -> IO String
+Prelude> :l add.hs
+[1 of 1] Compiling Main             ( add.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> add 1 2
+3
+*Main> :l Assign.hs
+[1 of 1] Compiling Main             ( Assign.hs, interpreted )
+
+Assign.hs:2:0:
+    Multiple declarations of `Main.x'
+    Declared at: Assign.hs:1:0
+                 Assign.hs:2:0
+Failed, modules loaded: none.
+Prelude> drop 2 "foobar"
+"obar"
+Prelude> drop 4 "foobar"
+"ar"
+Prelude> drop 4 [1,2]
+[]
+Prelude> drop 0 [1,2]
+[1,2]
+Prelude> drop 7 []
+[]
+Prelude> drop (-2) "foo"
+"foo"
+Prelude> :l myDrop.hs
+[1 of 1] Compiling Main             ( myDrop.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> myDrop 2 "foobar"
+"obar"
+*Main> myDrop 4 "foobar"
+"ar"
+*Main> myDrop 4 [1,2]
+[]
+*Main> myDrop 0 [1,2]
+[1,2]
+*Main> myDrop 7 []
+[]
+*Main> myDrop (-2) "foo"
+"foo"
+*Main> :t null
+null :: [a] -> Bool
+*Main> :t ||
+
+<interactive>:1:0: parse error on input `||'
+*Main> :t (||)
+(||) :: Bool -> Bool -> Bool
+*Main> :l RoundToEven.hs
+[1 of 1] Compiling Main             ( RoundToEven.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> print (myDrop 2 "abcd")
+
+<interactive>:1:7: Not in scope: `myDrop'
+*Main> :l myDrop.hs
+[1 of 1] Compiling Main             ( myDrop.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> print (myDrop 2 "abcd")
+"cd"
+*Main> last [1,2,3,4,5]
+5
+*Main> last "baz"
+'z'
+*Main> :type last
+last :: [a] -> a
+*Main> :t fst
+fst :: (a, b) -> a
+*Main> :t take
+take :: Int -> [a] -> [a]

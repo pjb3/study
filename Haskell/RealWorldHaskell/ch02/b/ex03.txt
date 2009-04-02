@@ -1,0 +1,6 @@
+*Main> lastButOne [1,2]
+1
+*Main> lastButOne [1]
+*** Exception: Prelude.last: empty list
+*Main> lastButOne []
+*** Exception: Prelude.init: empty list

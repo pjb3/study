@@ -1,0 +1,199 @@
+GHCi, version 6.10.1: http://www.haskell.org/ghc/  :? for help
+Loading package ghc-prim ... linking ... done.
+Loading package integer ... linking ... done.
+Loading package base ... linking ... done.
+Prelude> :set prompt "ghci> "
+ghci> :module + Data.Ratio
+ghci> 2 + 2
+4
+ghci> 31337 * 101
+3165037
+ghci> 7.0 / 2.0
+3.5
+ghci> 2 + 2
+4
+ghci> (+) 2 2
+4
+ghci> 313 ^ 15
+27112218957718876716220410905036741257
+ghci> -3
+-3
+ghci> 2 + -3
+
+<interactive>:1:0:
+    precedence parsing error
+        cannot mix `(+)' [infixl 6] and prefix `-' [infixl 6] in the same infix expression
+ghci> 2 + (-3)
+-1
+ghci> 3 + (-(13 * 37))
+-478
+ghci> 2*3
+6
+ghci> 2*-3
+
+<interactive>:1:1: Not in scope: `*-'
+ghci> 2*(-3)
+-6
+ghci> True && False
+False
+ghci> False || True
+True
+ghci> True & 1
+
+<interactive>:1:5: Not in scope: `&'
+ghci> True && 1
+
+<interactive>:1:8:
+    No instance for (Num Bool)
+      arising from the literal `1' at <interactive>:1:8
+    Possible fix: add an instance declaration for (Num Bool)
+    In the second argument of `(&&)', namely `1'
+    In the expression: True && 1
+    In the definition of `it': it = True && 1
+ghci> 1 == 1
+True
+ghci> 2 < 3
+True
+ghci> 4 >= 3.99
+True
+ghci> 2 /= 3
+True
+ghci> not True
+False
+ghci> 1 + (4 * 4)
+17
+ghci> 1 + 4 * 4
+17
+ghci> :info (+)
+class (Eq a, Show a) => Num a where
+  (+) :: a -> a -> a
+  ...
+        -- Defined in GHC.Num
+infixl 6 +
+ghci> :info (*)
+class (Eq a, Show a) => Num a where
+  ...
+  (*) :: a -> a -> a
+  ...
+        -- Defined in GHC.Num
+infixl 7 *
+ghci> :info (^)
+(^) :: (Num a, Integral b) => a -> b -> a       -- Defined in GHC.Real
+infixr 8 ^
+ghci> pi
+3.141592653589793
+ghci> e
+
+<interactive>:1:0: Not in scope: `e'
+ghci> let e = exp 1
+ghci> e
+2.718281828459045
+ghci> (e ** pi) - pi
+19.99909997918947
+ghci> [1, 2, 3]
+[1,2,3]
+ghci> []
+[]
+ghci> ["foo", "bar", "baz", "quux", "fnord","xyzzy"]
+["foo","bar","baz","quux","fnord","xyzzy"]
+ghci> [True, False, "testing"]
+
+<interactive>:1:14:
+    Couldn't match expected type `Bool' against inferred type `[Char]'
+    In the expression: "testing"
+    In the expression: [True, False, "testing"]
+    In the definition of `it': it = [True, False, "testing"]
+ghci> [1..10]
+[1,2,3,4,5,6,7,8,9,10]
+ghci> [1.0,1.25..2.0]
+[1.0,1.25,1.5,1.75,2.0]
+ghci> [1,4..15]
+[1,4,7,10,13]
+ghci> [10,9..1]
+[10,9,8,7,6,5,4,3,2,1]
+ghci> [3,1,3] ++ [3,7]
+[3,1,3,3,7]
+ghci> [] ++ [False,True] ++ [True]
+[False,True,True]
+ghci> 1 : [2,3]
+[1,2,3]
+ghci> 1 : []
+[1]
+ghci> "This is a string."
+"This is a string."
+ghci> putStrLn "Here's a newline -->\n<-- See?"
+Here's a newline -->
+<-- See?
+ghci> 'a'
+'a'
+ghci> let a = ['l', 'o', 't', 's', ' ', 'o', 'f', ' ', 'w', 'o', 'r', 'k']
+ghci> a
+"lots of work"
+ghci> a == "lots of work"
+True
+ghci> "" == []
+True
+ghci> 'a':"bc"
+"abc"
+ghci> "foo" ++ "bar"
+"foobar"
+ghci> :set +t
+ghci> 'c'
+'c'
+it :: Char
+ghci> "foo"
+"foo"
+it :: [Char]
+ghci> it ++ 3
+
+<interactive>:1:6:
+    No instance for (Num [Char])
+      arising from the literal `3' at <interactive>:1:6
+    Possible fix: add an instance declaration for (Num [Char])
+    In the second argument of `(++)', namely `3'
+    In the expression: it ++ 3
+    In the definition of `it': it = it ++ 3
+ghci> it ++ "bar"
+"foobar"
+it :: [Char]
+ghci> 7 ^ 80
+40536215597144386832065866109016673800875222251012083746192454448001
+it :: Integer
+ghci> 11 % 29
+11 % 29
+it :: Ratio Integer
+ghci> 3.14 % 8
+
+<interactive>:1:0:
+    Ambiguous type variable `t' in the constraints:
+      `Fractional t'
+        arising from the literal `3.14' at <interactive>:1:0-3
+      `Integral t' arising from a use of `%' at <interactive>:1:0-7
+    Probable fix: add a type signature that fixes these type variable(s)
+ghci> 1.2 % 3.4
+
+<interactive>:1:6:
+    Ambiguous type variable `t' in the constraints:
+      `Fractional t'
+        arising from the literal `3.4' at <interactive>:1:6-8
+      `Integral t' arising from a use of `%' at <interactive>:1:0-8
+    Probable fix: add a type signature that fixes these type variable(s)
+ghci> :unset t
+unknown option: 't'
+ghci> :unset +t
+ghci> 2
+2
+ghci> :t 'a'
+'a' :: Char
+ghci> "foo"
+"foo"
+ghci> :t it
+it :: [Char]
+ghci> 3 + 2
+5
+ghci> :t it
+it :: Integer
+ghci> :t 3 + 2
+3 + 2 :: (Num t) => t
+ghci> :q
+Leaving GHCi.
