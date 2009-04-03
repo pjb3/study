@@ -1,0 +1,2 @@
+*Main> :t myLength
+myLength :: (Num b) => [a] -> b

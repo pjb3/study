@@ -1,0 +1,181 @@
+Prelude> :l BookStore.hs
+[1 of 1] Compiling Main             ( BookStore.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> myInfo
+Book 494539463 "Algebra of Programming" ["Richard Bird","Oege de Moor"]
+*Main> :t myinfo
+
+<interactive>:1:0: Not in scope: `myinfo'
+*Main> :t myInfo
+myInfo :: BookInfo
+*Main> Book 0 "The Book of Imaginary Beings" ["Jorge Luis Borges"]
+Book 0 "The Book of Imaginary Beings" ["Jorge Luis Borges"]
+*Main> :type Book 1 "Cosmicomics" ["Italo Calvino"]
+Book 1 "Cosmicomics" ["Italo Calvino"] :: BookInfo
+*Main> 
+*Main> 
+*Main> let cities = Book 173 "Use of Weapons" ["Iain M. Banks"]
+*Main> :info BookInfo
+data BookInfo = Book Int String [String]
+        -- Defined at BookStore.hs:1:5-12
+instance Show BookInfo -- Defined at BookStore.hs:2:26-29
+*Main> :t Book
+Book :: Int -> String -> [String] -> BookInfo
+*Main> :r
+[1 of 1] Compiling Main             ( BookStore.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :t CreditCard
+CreditCard :: CardNumber -> CardHolder -> Address -> BillingInfo
+*Main> CreditCard "2901650221064486" "Thomas Gradgrind" ["Dickens", "England"]
+CreditCard "2901650221064486" "Thomas Gradgrind" ["Dickens","England"]
+*Main> :type it
+it :: BillingInfo
+*Main> Invoice
+
+<interactive>:1:0:
+    No instance for (Show (CustomerID -> BillingInfo))
+      arising from a use of `print' at <interactive>:1:0-6
+    Possible fix:
+      add an instance declaration for (Show (CustomerID -> BillingInfo))
+    In a stmt of a 'do' expression: print it
+*Main> :t Invoice
+Invoice :: CustomerID -> BillingInfo
+*Main> :l ./AlgebraicVector.hs 
+[1 of 1] Compiling Main             ( AlgebraicVector.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> Cartesian2D (sqrt 2) (sqrt 2) == Polar2D (pi / 4) 2
+
+<interactive>:1:33:
+    Couldn't match expected type `Cartesian2D'
+           against inferred type `Polar2D'
+    In the second argument of `(==)', namely `Polar2D (pi / 4) 2'
+    In the expression:
+          Cartesian2D (sqrt 2) (sqrt 2) == Polar2D (pi / 4) 2
+    In the definition of `it':
+        it = Cartesian2D (sqrt 2) (sqrt 2) == Polar2D (pi / 4) 2
+*Main> (1, 2) == (1, )
+
+<interactive>:1:14: parse error on input `)'
+*Main> (1, 2) == (1, 2)
+True
+*Main> :l ./Roygbiv.hs 
+[1 of 1] Compiling Main             ( Roygbiv.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :t Yellow
+Yellow :: Roygbiv
+*Main> :t Red
+Red :: Roygbiv
+*Main> Red == Yellow
+False
+*Main> Green == Green 
+True
+*Main> take 3 "foobar"
+"foo"
+*Main> take Red "foobar"
+
+<interactive>:1:5:
+    Couldn't match expected type `Int' against inferred type `Roygbiv'
+    In the first argument of `take', namely `Red'
+    In the expression: take Red "foobar"
+    In the definition of `it': it = take Red "foobar"
+*Main> :l ./ShapeUnion.hs 
+[1 of 1] Compiling Main             ( ShapeUnion.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :l ./Tuple.hs 
+[1 of 1] Compiling Main             ( Tuple.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> complicated (True, 1, [1,2,3], 5)
+(1,[2,3])
+*Main> complicated (False, 1, [1,2,3], 5)
+*** Exception: Tuple.hs:2:0-39: Non-exhaustive patterns in function complicated
+
+*Main> :r
+Ok, modules loaded: Main.
+*Main> bookID (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+
+<interactive>:1:0: Not in scope: `bookID'
+
+<interactive>:1:8: Not in scope: data constructor `Book'
+*Main> :l ./BookStore.hs 
+[1 of 1] Compiling Main             ( BookStore.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> bookID (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+3
+*Main> bookTitle (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+"Probability Theory"
+*Main> 
+*Main> bookAuthors (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+["E.T.H. Jaynes"]
+*Main> :t bookID
+bookID :: BookInfo -> Int
+*Main> :t bookTitle
+bookTitle :: BookInfo -> String
+*Main> :t bookAuthors
+bookAuthors :: BookInfo -> [String]
+*Main> :l ./BadPattern.hs 
+[1 of 1] Compiling Main             ( BadPattern.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> badExample []
+*** Exception: BadPattern.hs:1:0-36: Non-exhaustive patterns in function badExample
+
+*Main> :r
+[1 of 1] Compiling Main             ( BadPattern.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> goodExample []
+0
+*Main> goodExample [1,2]
+3
+*Main> :l ./BookStore.hs 
+[1 of 1] Compiling Main             ( BookStore.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :t customerID
+customerID :: Customer -> CustomerID
+*Main> :r
+[1 of 1] Compiling Main             ( BookStore.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> customer1
+Customer {customerID = 271828, customerName = "J.R. Hacker", customerAddress = ["255 Syntax Ct","Milpitas, CA 95134","USA"]}
+*Main> cities
+
+<interactive>:1:0: Not in scope: `cities'
+*Main> :l ./Nullable.hs 
+[1 of 1] Compiling Main             ( Nullable.hs, interpreted )
+
+Nullable.hs:4:11:
+    Ambiguous occurrence `Just'
+    It could refer to either `Main.Just', defined at Nullable.hs:1:15
+                          or `Prelude.Just', imported from Prelude
+
+Nullable.hs:6:13:
+    Ambiguous occurrence `Just'
+    It could refer to either `Main.Just', defined at Nullable.hs:1:15
+                          or `Prelude.Just', imported from Prelude
+Failed, modules loaded: none.
+Prelude> :r
+[1 of 1] Compiling Main             ( Nullable.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> :l ./Nullable.hs
+[1 of 1] Compiling Main             ( Nullable.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> Just 1.5
+Just 1.5
+*Main> Nothing
+Nothing
+*Main> :type Just "invisible bike"
+Just "invisible bike" :: Maybe [Char]
+*Main> let wrapped = Just (Just "wrapped")
+*Main> :t wrapped
+wrapped :: Maybe (Maybe [Char])
+*Main> :l ./ListADT.hs 
+[1 of 1] Compiling Main             ( ListADT.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> Nil
+Nil
+*Main> Cons 0 Nil
+Cons 0 Nil
+*Main> Cons 1 it
+Cons 1 (Cons 0 Nil)
+*Main> Cons 2 it
+Cons 2 (Cons 1 (Cons 0 Nil))
+*Main> Cons 3 it
+Cons 3 (Cons 2 (Cons 1 (Cons 0 Nil)))
