@@ -1,0 +1,26 @@
+foldl :: (a -> b -> a) -> a -> [b] -> a
+
+foldl step acc (x:xs) = foldl step (step acc x) xs
+foldl _    acc []     = acc
+
+
+foldr :: (a -> b -> b) -> b -> [a] -> b
+
+foldr step acc (x:xs) = step x (foldr step acc xs)
+foldr _    acc []     = acc
+
+foldr cons [] [1..3]
+cons 1 (foldr cons [] [2,3])
+cons 1 (cons 2 (foldr cons [] [3]))
+cons 1 (cons 2 (cons 3 (foldr cons [] [])))
+cons 1 (cons 2 (cons 3 []))
+cons 1 (cons 2 [3])
+cons 1 [2, 3]
+[1, 2, 3]
+
+
+takeWhile (< 2) (cons 1 (cons 2 (cons 3 [])))
+
+takeWhile (< 2) (foldr cons [] [1..])
+takeWhile (< 2) (cons 1 (foldr cons [] [2,3]))
+takeWhile (< 2) (cons 1 (cons 2 (foldr cons [] [3])))
