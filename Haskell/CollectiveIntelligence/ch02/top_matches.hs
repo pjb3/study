@@ -1,7 +1,9 @@
+import Data.List(sort)
 import Data.Map((!), intersection, fromList, keys)
 import qualified Data.Map as M
 
 type Preferences = M.Map String (M.Map String Double)
+type Similarity = Preferences -> String -> String -> Double
 
 critics :: Preferences
 critics = fromList [
@@ -46,3 +48,10 @@ sim_pearson prefs p1 p2 =
         in case den of
           0 -> 0
           otherwise -> num / den
+
+top_matches :: Preferences -> String -> Int -> Similarity -> [(Double, String)]
+top_matches prefs person n sim =
+  take n $ 
+    reverse $ 
+      sort [(sim prefs person other, other) 
+        | other <- (keys prefs), other /= person ]
