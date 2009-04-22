@@ -17,6 +17,7 @@
 		8694B7E10F9F1CCC0053E7BE /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B7E00F9F1CCC0053E7BE /* State.m */; };
 		8694B82B0F9FA5F70053E7BE /* ByPopulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B82A0F9FA5F70053E7BE /* ByPopulationViewController.m */; };
 		8694B8320F9FA8620053E7BE /* ByAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B8310F9FA8620053E7BE /* ByAreaViewController.m */; };
+		8694B8E00F9FB2AD0053E7BE /* StatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B8DF0F9FB2AD0053E7BE /* StatesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		8694B82A0F9FA5F70053E7BE /* ByPopulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByPopulationViewController.m; sourceTree = "<group>"; };
 		8694B8300F9FA8620053E7BE /* ByAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByAreaViewController.h; sourceTree = "<group>"; };
 		8694B8310F9FA8620053E7BE /* ByAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByAreaViewController.m; sourceTree = "<group>"; };
+		8694B8DE0F9FB2AD0053E7BE /* StatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesViewController.h; sourceTree = "<group>"; };
+		8694B8DF0F9FB2AD0053E7BE /* StatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +67,8 @@
 				8694B82A0F9FA5F70053E7BE /* ByPopulationViewController.m */,
 				8694B8300F9FA8620053E7BE /* ByAreaViewController.h */,
 				8694B8310F9FA8620053E7BE /* ByAreaViewController.m */,
+				8694B8DE0F9FB2AD0053E7BE /* StatesViewController.h */,
+				8694B8DF0F9FB2AD0053E7BE /* StatesViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				8694B7E10F9F1CCC0053E7BE /* State.m in Sources */,
 				8694B82B0F9FA5F70053E7BE /* ByPopulationViewController.m in Sources */,
 				8694B8320F9FA8620053E7BE /* ByAreaViewController.m in Sources */,
+				8694B8E00F9FB2AD0053E7BE /* StatesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

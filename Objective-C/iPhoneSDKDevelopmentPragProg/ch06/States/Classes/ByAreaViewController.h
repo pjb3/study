@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StatesViewController.h"
 
+@interface ByAreaViewController : StatesViewController {
 
-@interface ByAreaViewController : UITableViewController {
-  NSArray *states;
 }
 
 @end
