@@ -26,7 +26,7 @@
 #pragma mark -
 #pragma mark Finders
 
-+ (NSArray *) allStatesByPopulation {
++ (NSArray *) allStates {
   NSMutableArray *data = [NSMutableArray array];
   
   [data addObject: [State stateWithName: @"California"
@@ -52,8 +52,9 @@
   return [NSArray arrayWithArray:data];
 }
 
-+ (NSArray *) allStatesByArea {
-  return [[self allStatesByPopulation] sortedArrayUsingSelector:@selector(area)];
++ (NSArray *) allStatesSortedByProperty:(NSString *)propertyName ascending:(BOOL)ascending {
+  NSSortDescriptor *sorter = [[[NSSortDescriptor alloc] initWithKey:propertyName ascending:ascending] autorelease];
+  return [[self allStates] sortedArrayUsingDescriptors: [NSArray arrayWithObject:sorter]];
 }
 
 #pragma mark -

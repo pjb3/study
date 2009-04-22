@@ -12,7 +12,7 @@
 @implementation ByPopulationViewController
 
 - (void) loadStates {
-  self.states = [State allStatesByPopulation];
+  self.states = [State allStatesSortedByProperty: @"population" ascending: YES];
 }
 
 @end

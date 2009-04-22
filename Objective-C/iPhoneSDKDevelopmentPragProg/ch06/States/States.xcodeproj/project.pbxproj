@@ -11,13 +11,16 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SecondView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		8694B7E10F9F1CCC0053E7BE /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B7E00F9F1CCC0053E7BE /* State.m */; };
 		8694B82B0F9FA5F70053E7BE /* ByPopulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B82A0F9FA5F70053E7BE /* ByPopulationViewController.m */; };
 		8694B8320F9FA8620053E7BE /* ByAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B8310F9FA8620053E7BE /* ByAreaViewController.m */; };
 		8694B8E00F9FB2AD0053E7BE /* StatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B8DF0F9FB2AD0053E7BE /* StatesViewController.m */; };
+		8694B92D0F9FB7290053E7BE /* ByPopulationDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B92C0F9FB7290053E7BE /* ByPopulationDescViewController.m */; };
+		8694B94E0F9FB8A90053E7BE /* ByAreaDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B94D0F9FB8A90053E7BE /* ByAreaDescViewController.m */; };
+		8694B9620F9FBA0C0053E7BE /* ByNameDescViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B9610F9FBA0C0053E7BE /* ByNameDescViewController.m */; };
+		8694B9650F9FBA510053E7BE /* ByNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694B9640F9FBA510053E7BE /* ByNameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,6 @@
 		1D3623250D0F684500981E51 /* StatesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* States.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = States.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		282CCBFD0DB6C98000C4EA27 /* SecondView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* States_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = States_Prefix.pch; sourceTree = "<group>"; };
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 		8694B8310F9FA8620053E7BE /* ByAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByAreaViewController.m; sourceTree = "<group>"; };
 		8694B8DE0F9FB2AD0053E7BE /* StatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatesViewController.h; sourceTree = "<group>"; };
 		8694B8DF0F9FB2AD0053E7BE /* StatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatesViewController.m; sourceTree = "<group>"; };
+		8694B92B0F9FB7290053E7BE /* ByPopulationDescViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByPopulationDescViewController.h; sourceTree = "<group>"; };
+		8694B92C0F9FB7290053E7BE /* ByPopulationDescViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByPopulationDescViewController.m; sourceTree = "<group>"; };
+		8694B94C0F9FB8A90053E7BE /* ByAreaDescViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByAreaDescViewController.h; sourceTree = "<group>"; };
+		8694B94D0F9FB8A90053E7BE /* ByAreaDescViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByAreaDescViewController.m; sourceTree = "<group>"; };
+		8694B9600F9FBA0C0053E7BE /* ByNameDescViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByNameDescViewController.h; sourceTree = "<group>"; };
+		8694B9610F9FBA0C0053E7BE /* ByNameDescViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByNameDescViewController.m; sourceTree = "<group>"; };
+		8694B9630F9FBA510053E7BE /* ByNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByNameViewController.h; sourceTree = "<group>"; };
+		8694B9640F9FBA510053E7BE /* ByNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByNameViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,12 +73,20 @@
 				1D3623250D0F684500981E51 /* StatesAppDelegate.m */,
 				8694B7DF0F9F1CCC0053E7BE /* State.h */,
 				8694B7E00F9F1CCC0053E7BE /* State.m */,
+				8694B92B0F9FB7290053E7BE /* ByPopulationDescViewController.h */,
+				8694B92C0F9FB7290053E7BE /* ByPopulationDescViewController.m */,
 				8694B8290F9FA5F70053E7BE /* ByPopulationViewController.h */,
 				8694B82A0F9FA5F70053E7BE /* ByPopulationViewController.m */,
+				8694B94C0F9FB8A90053E7BE /* ByAreaDescViewController.h */,
+				8694B94D0F9FB8A90053E7BE /* ByAreaDescViewController.m */,
 				8694B8300F9FA8620053E7BE /* ByAreaViewController.h */,
 				8694B8310F9FA8620053E7BE /* ByAreaViewController.m */,
 				8694B8DE0F9FB2AD0053E7BE /* StatesViewController.h */,
 				8694B8DF0F9FB2AD0053E7BE /* StatesViewController.m */,
+				8694B9600F9FBA0C0053E7BE /* ByNameDescViewController.h */,
+				8694B9610F9FBA0C0053E7BE /* ByNameDescViewController.m */,
+				8694B9630F9FBA510053E7BE /* ByNameViewController.h */,
+				8694B9640F9FBA510053E7BE /* ByNameViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -105,7 +123,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
@@ -165,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +198,10 @@
 				8694B82B0F9FA5F70053E7BE /* ByPopulationViewController.m in Sources */,
 				8694B8320F9FA8620053E7BE /* ByAreaViewController.m in Sources */,
 				8694B8E00F9FB2AD0053E7BE /* StatesViewController.m in Sources */,
+				8694B92D0F9FB7290053E7BE /* ByPopulationDescViewController.m in Sources */,
+				8694B94E0F9FB8A90053E7BE /* ByAreaDescViewController.m in Sources */,
+				8694B9620F9FBA0C0053E7BE /* ByNameDescViewController.m in Sources */,
+				8694B9650F9FBA510053E7BE /* ByNameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,9 +11,8 @@
 
 @implementation ByAreaViewController
 
-- (void) viewDidLoad {
-  [super viewDidLoad];
-  self.states = [State allStatesByArea];
+- (void) loadStates {
+  self.states = [State allStatesSortedByProperty: @"area" ascending: YES];
 }
 
 @end

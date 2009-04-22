@@ -27,8 +27,8 @@
 #pragma mark -
 #pragma mark Finders
 
-+ (NSArray *) allStatesByPopulation;
-+ (NSArray *) allStatesByArea;
++ (NSArray *) allStates;
++ (NSArray *) allStatesSortedByProperty:(NSString *)propertyName ascending:(BOOL)ascending;
 
 #pragma mark -
 #pragma mark Initializers
