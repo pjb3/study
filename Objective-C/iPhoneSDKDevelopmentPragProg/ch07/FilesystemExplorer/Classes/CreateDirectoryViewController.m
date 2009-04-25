@@ -27,7 +27,6 @@
 
 - (BOOL) create {
   if([self validate]) {
-    NSLog(@"Creating");
     [directoryNameField resignFirstResponder];
     mkdir(newDirectoryPath);
     [directoryViewController loadDirectoryContents];
@@ -35,13 +34,11 @@
     [self.navigationController popViewControllerAnimated: YES];      
     return YES;
   } else {
-    NSLog(@"Invalid");
     return NO;
   }
 }
 
 - (BOOL) validate {
-  NSLog(@"Validating");
   newDirectoryPath = fileJoin(parentDirectoryPath, directoryNameField.text);
   if(!isWriteable(parentDirectoryPath)) {
     alert(@"Not Writeable", @"You cannot write to this directory");
@@ -55,12 +52,10 @@
 }
 
 - (IBAction) save {
-  NSLog(@"save");
   [self create];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
-  NSLog(@"textFieldShouldReturn");
   return [self create];
 }
 

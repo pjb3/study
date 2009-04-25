@@ -151,5 +151,28 @@
   }
 }
 
+- (void) tableView: (UITableView *)tableView
+commitEditingStyle: (UITableViewCellEditingStyle)editingStyle
+ forRowAtIndexPath: (NSIndexPath *)indexPath {
+  
+  if(editingStyle == UITableViewCellEditingStyleDelete) {
+    NSString *selectedFile = (NSString *)[directoryContents objectAtIndex: indexPath.row];
+    NSString *selectedPath = fileJoin(directoryPath, selectedFile);
+    if(isWriteable(selectedPath)) {
+      NSError *error = nil;
+      if([[NSFileManager defaultManager] removeItemAtPath: selectedPath error: &error]) {
+        [self loadDirectoryContents];
+        NSArray *deletedPaths = [NSArray arrayWithObject: indexPath];
+        [self.tableView deleteRowsAtIndexPaths: deletedPaths withRowAnimation: YES];
+      } else {
+        alert(@"Error", [NSString stringWithFormat: @"Error Code: %d", [error code]]);
+      }
+    } else {
+      alert(@"Not Writeable", @"You cannont delete this file");
+    }
+  }
+  
+}
+
 @end
 
