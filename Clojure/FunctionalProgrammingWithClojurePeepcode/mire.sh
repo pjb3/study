@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -cp /Users/pbarry/src/clojure/clojure.jar:/Users/pbarry/src/clojure-contrib/clojure-contrib.jar:src/ clojure.main -e "(use 'mire) (start-server)"
+java -cp /Users/pbarry/src/clojure/clojure.jar:/Users/pbarry/src/clojure-contrib/clojure-contrib.jar:src/ clojure.main src/mire.clj

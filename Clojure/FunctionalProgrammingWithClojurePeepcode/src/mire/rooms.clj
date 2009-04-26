@@ -1,15 +1,26 @@
-(ns mire.rooms
-  (:use [clojure.contrib str-utils]))
-  
-(def rooms
-  {:start 
-    {:desc "You find yourself in a round room with a pillar in the middle"
-     :exits {:north :closet}}
-   :closet 
-    {:desc "You are in a cramped closet."
-     :exits {:south :start}}})
-            
-(def *current-room* (rooms :start))
+(ns mire.rooms)
 
-(defn set-current-room [target]
-  (def *current-room* target))              
+(declare rooms)
+
+(defn load-room [rooms file]
+  (let [room (read-string (slurp (.getAbsolutePath file)))]
+    (conj rooms
+          {(keyword (.getName file))
+           {:desc (:desc room)
+            :exits (ref (:exits room))
+            :inhabitants (ref #{})}})))
+
+(defn load-rooms [dir]
+  "Given a dir, return a map with an entry corresponding to each file
+in it. Files should be maps containing room data."
+  (reduce load-room {} (.listFiles (java.io.File. dir))))
+
+(defn set-rooms
+  "Set mire.rooms/rooms to a map of rooms corresponding to each file
+  in dir. This function should be used only once at mire startup, so
+  having a def inside the function body should be OK."
+  [dir]
+  (def rooms (load-rooms dir)))
+
+(def *current-room*)
+(def player-name)
