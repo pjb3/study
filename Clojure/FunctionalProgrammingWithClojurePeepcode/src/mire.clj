@@ -8,6 +8,7 @@
 (defn- mire-handle-client [in out]
   (binding [*in* (reader in)
             *out* (writer out)]
+    (println (look))
     (print prompt)
     (flush)
     (loop [input (read-line)]
@@ -16,4 +17,6 @@
       (flush)
       (recur (read-line)))))
             
-(def server (create-server port mire-handle-client))
+(defn start-server [] 
+  (create-server port mire-handle-client)
+  (println "Mire Server Listening on Port" port))
