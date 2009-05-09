@@ -8,6 +8,7 @@
           {(keyword (.getName file))
            {:desc (:desc room)
             :exits (ref (:exits room))
+            :items (ref (or (:items room) []))
             :inhabitants (ref #{})}})))
 
 (defn load-rooms [dir]
@@ -22,5 +23,6 @@ in it. Files should be maps containing room data."
   [dir]
   (def rooms (load-rooms dir)))
 
-(def *current-room*)
-(def player-name)
+(defn room-contains?
+  [room thing]
+  (@(:items room) (keyword thing)))
