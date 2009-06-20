@@ -27,4 +27,5 @@ config.action_mailer.delivery_method = :test
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
 
-config.gem "webrat", :version => ">=0.4.3"
+config.gem "webrat", :version => ">=0.4.4"
+config.gem "bmabey-database_cleaner", :lib => 'database_cleaner', :source => "http://gems.github.com"

@@ -1,6 +1,9 @@
 require 'test_helper'
  
 class AuthenticationTest < ActionController::IntegrationTest
+  def setup
+    DatabaseCleaner.clean
+  end
   test "logging in with valid username and password" do
     User.create!(:username => "pjb3", :email => "paul@example.com", :password => "too_many_secrets")
     visit login_url
