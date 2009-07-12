@@ -2,7 +2,8 @@ class TwittRbDelegate
   
   attr_accessor :credentials_window, :main_window
   attr_accessor :username_field, :password_field
-  attr_accessor :username, :password
+  attr_accessor :username, :password, :updates
+  attr_accessor :table_view, :status_label
   
   def applicationDidFinishLaunching(notification)
     NSApp.beginSheet(credentials_window,
@@ -10,6 +11,10 @@ class TwittRbDelegate
       modalDelegate: nil,
       didEndSelector: nil,
       contextInfo: nil)
+  end
+  
+  def initialize
+    @updates = []
   end
   
   def submitCredentials(sender)
@@ -44,8 +49,15 @@ class TwittRbDelegate
       options: NSXMLDocumentValidate,
       error: nil)
       
-    updates = doc.rootElement.nodesForXPath('status', error: nil);
-    NSLog "Received #{updates.count} updates from Twitter"  
+    statuses = doc.rootElement.nodesForXPath('status', error: nil);
+    self.updates = statuses.map do |s|
+      {
+        :user => s.nodesForXPath('user/name', error: nil).first.stringValue,
+        :tweet => s.nodesForXPath('text', error: nil).first.stringValue
+      }
+    end  
+    table_view.reloadData
+    self.status_label.stringValue = "Received #{updates.count} Statuses"
   end
   
   def connection(conn, didReceiveAuthenticationChallenge: challenge)
