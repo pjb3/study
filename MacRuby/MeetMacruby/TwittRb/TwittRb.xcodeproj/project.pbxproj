@@ -11,6 +11,7 @@
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		862F21AA100A7C0D00116DFC /* TwittRbDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 862F21A9100A7C0D00116DFC /* TwittRbDelegate.rb */; };
 		862F2231100A8A8100116DFC /* TRTableDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 862F2230100A8A8100116DFC /* TRTableDelegate.rb */; };
+		862F2247100AB7B200116DFC /* TRConnectionDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 862F2246100AB7B200116DFC /* TRConnectionDelegate.rb */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -29,6 +30,7 @@
 		4DE3BE130D8651D900ECA448 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		862F21A9100A7C0D00116DFC /* TwittRbDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TwittRbDelegate.rb; sourceTree = "<group>"; };
 		862F2230100A8A8100116DFC /* TRTableDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TRTableDelegate.rb; sourceTree = "<group>"; };
+		862F2246100AB7B200116DFC /* TRConnectionDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TRConnectionDelegate.rb; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TwittRb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwittRb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 			children = (
 				862F21A9100A7C0D00116DFC /* TwittRbDelegate.rb */,
 				862F2230100A8A8100116DFC /* TRTableDelegate.rb */,
+				862F2246100AB7B200116DFC /* TRConnectionDelegate.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */,
 				862F21AA100A7C0D00116DFC /* TwittRbDelegate.rb in Resources */,
 				862F2231100A8A8100116DFC /* TRTableDelegate.rb in Resources */,
+				862F2247100AB7B200116DFC /* TRConnectionDelegate.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
