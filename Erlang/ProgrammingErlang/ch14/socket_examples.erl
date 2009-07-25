@@ -25,6 +25,17 @@ start_nano_server() ->
   {ok, Socket} = gen_tcp:accept(Listen), 
   gen_tcp:close(Listen), 
   loop(Socket). 
+
+start_seq_server() ->
+  {ok, Listen} = gen_tcp:listen(2345, [binary, {packet, 4}, 
+                                        {reuseaddr, true}, 
+                                        {active, true}]), 
+  seq_loop(Listen).                                  
+
+seq_loop(Listen) ->
+  {ok, Socket} = gen_tcp:accept(Listen), 
+  loop(Socket),
+  seq_loop(Listen).
   
 loop(Socket) -> 
   receive 
