@@ -21,4 +21,5 @@ s.sendall(data)
 print "Looking for replies; press Ctrl-C or Ctrl-Break to stop." 
 while 1: 
     buf = s.recvfrom(2048)
-    sys.stdout.write(buf[0]) 
+    print buf[0]
+
