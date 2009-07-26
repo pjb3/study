@@ -16,10 +16,11 @@ except ValueError:
 s.connect((host, port)) 
 print "Enter data to transmit: " 
 data = sys.stdin.readline().strip() 
-s.sendall(data) 
+s.sendall(data)
+ 
 print "Looking for replies; press Ctrl-C or Ctrl-Break to stop." 
 while 1: 
-    buf = s.recv(2048) 
+    buf = s.recvfrom(2048)[0]
     if not len(buf): 
         break 
     sys.stdout.write(buf) 
