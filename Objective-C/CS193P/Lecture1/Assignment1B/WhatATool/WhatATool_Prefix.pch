@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'WhatATool' target in the 'WhatATool' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
