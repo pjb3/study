@@ -11,3 +11,5 @@ build
 *.o
 *.out
 *.beam
+Mnesia.*@*
+erl_crash.dump
