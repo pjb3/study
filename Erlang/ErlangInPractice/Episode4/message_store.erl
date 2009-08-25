@@ -12,7 +12,8 @@
          created_on}).
 
 start() ->
-  server_util:start(?SERVER, {message_store, run, [false]}).
+  init_store(),
+  server_util:start(?SERVER, {message_store, run, []}).
   
 stop() ->
   server_util:stop(?SERVER).
@@ -27,24 +28,18 @@ find_messages(Addressee) ->
       Messages
   end.  
   
-run(Initialized) ->
-  if
-    Initialized == false ->
-      init_store(),
-      run(true);
-    true ->
-      receive
-        {save_msg, Addressee, Body} ->
-          store_message(Addressee, Body),
-          run(true);
-        {find_msgs, Addressee, Pid} ->
-          Messages = get_messages(Addressee),
-          Pid ! {ok, Messages},
-          run(true);
-        shutdown ->
-          mnesia:stop(),
-          io:format("Shutting down...~n")
-      end
+run() ->
+  receive
+    {save_msg, Addressee, Body} ->
+      store_message(Addressee, Body),
+      run();
+    {find_msgs, Addressee, Pid} ->
+      Messages = get_messages(Addressee),
+      Pid ! {ok, Messages},
+      run();
+    shutdown ->
+      mnesia:stop(),
+      io:format("Shutting down...~n")
   end.
   
 delete_messages(Messages) ->
