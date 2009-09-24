@@ -13,3 +13,5 @@ build
 *.beam
 Mnesia.*@*
 erl_crash.dump
+*.log
+*.sqlite3
