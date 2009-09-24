@@ -1,0 +1,11 @@
+<div>This fragment contains some magic.</div> 
+
+<% javascript_tag do %>
+Ext.getBody().highlight(); 
+
+Ext.getCmp('myTabPanel').add({ 
+  title    : 'Peek-a-boo', 
+  closable : true, 
+  html     : 'Ext is awesome!' 
+}); 
+<% end %>

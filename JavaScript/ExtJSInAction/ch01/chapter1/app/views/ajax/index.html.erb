@@ -1,0 +1,42 @@
+<% content_for :html_head do %>
+  <% javascript_tag do %>
+    function initTabWindow() { 
+      
+      var ajaxPanel1 = new Ext.Panel({
+        title    : 'AJAX Panel 1', 
+        autoLoad : '/ajax/page1' 
+      });
+      
+      var ajaxPanel2 = new Ext.Panel({ 
+        title    : 'AJAX Panel 2', 
+        autoLoad : { 
+          url      : '/ajax/page2', 
+          scripts  : true 
+        }  
+      });
+      
+      var tabPanel = new Ext.TabPanel({ 
+        id        : 'myTabPanel',
+        activeTab : 0, 
+        items     : [ 
+         ajaxPanel1, 
+         ajaxPanel2 
+        ]
+      });
+        
+      var win =  new Ext.Window({ 
+        layout   : 'fit', 
+        title    : 'Ajax tab panel test window', 
+        width    : 300, 
+        height   : 150, 
+        closable : false, 
+        items    : tabPanel 
+      });
+       
+      win.show();
+      
+    }; 
+
+    Ext.onReady(initTabWindow);
+  <% end %>
+<% end %>

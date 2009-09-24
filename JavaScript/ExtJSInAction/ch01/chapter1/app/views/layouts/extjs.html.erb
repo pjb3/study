@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>ExtJS</title>
+    <%= javascript_include_tag :defaults %>
+    <%= stylesheet_link_tag "../javascripts/ext/resources/css/ext-all.css" %>
+    <%= javascript_include_tag "ext/adapter/prototype/prototype.js" %>
+    <%= javascript_include_tag "ext/adapter/prototype/scriptaculous.js" %>
+    <%= javascript_include_tag "ext/adapter/prototype/effects.js" %>
+    <%= javascript_include_tag "ext/adapter/prototype/ext-prototype-adapter.js" %>
+    <%= javascript_include_tag "ext/ext-all.js" %>
+    <%= yield :html_head %>
+  </head> 
+  <body>  
+    <%= yield %>
+  </body>
+</html>
