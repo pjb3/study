@@ -1,0 +1,11 @@
+<div>Hello from the <b>world</b> of AJAX!</div>
+
+<% javascript_tag do %> 
+  function highlightWindow() {
+    var win     = Ext.getCmp('myWindow');
+    var winBody = win.body;
+    winBody.fadeOut();
+  } 
+
+  highlightWindow.defer(1000);
+<% end %>
