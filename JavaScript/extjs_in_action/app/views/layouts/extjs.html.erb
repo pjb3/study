@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>ExtJS</title>
+    <%= stylesheet_link_tag "../javascripts/ext/resources/css/ext-all.css" %>
+    <%= javascript_include_tag "ext/adapter/ext/ext-base-debug.js" %>
+    <%= javascript_include_tag "ext/ext-all-debug.js" %>
+    <% javascript_tag do %>
+      Ext.BLANK_IMAGE_URL = '/javascripts/ext/resources/images/default/s.gif'; 
+    <% end %>
+    <%= yield :html_head %>
+  </head> 
+  <body>  
+    <%= yield %>
+  </body>
+</html>
