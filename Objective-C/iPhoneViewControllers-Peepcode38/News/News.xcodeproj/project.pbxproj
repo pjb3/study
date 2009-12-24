@@ -26,6 +26,8 @@
 		86AF881910D09ADC004A4303 /* TFThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF881810D09ADC004A4303 /* TFThumbnailViewController.m */; };
 		86AF882910D09F02004A4303 /* TFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF882710D09F02004A4303 /* TFWebViewController.m */; };
 		86AF882A10D09F02004A4303 /* TFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86AF882810D09F02004A4303 /* TFWebViewController.xib */; };
+		86E22FEE10E1AD04004FBBEE /* TFNewsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E22FED10E1AD04004FBBEE /* TFNewsListTableViewController.m */; };
+		86E2301810E1B277004FBBEE /* TFNewsDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E2301710E1B277004FBBEE /* TFNewsDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		86AF882610D09F02004A4303 /* TFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFWebViewController.h; sourceTree = "<group>"; };
 		86AF882710D09F02004A4303 /* TFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFWebViewController.m; sourceTree = "<group>"; };
 		86AF882810D09F02004A4303 /* TFWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFWebViewController.xib; sourceTree = "<group>"; };
+		86E22FEC10E1AD04004FBBEE /* TFNewsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNewsListTableViewController.h; sourceTree = "<group>"; };
+		86E22FED10E1AD04004FBBEE /* TFNewsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFNewsListTableViewController.m; sourceTree = "<group>"; };
+		86E2301610E1B277004FBBEE /* TFNewsDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNewsDetailTableViewController.h; sourceTree = "<group>"; };
+		86E2301710E1B277004FBBEE /* TFNewsDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFNewsDetailTableViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* News-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "News-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +167,10 @@
 				86AF882610D09F02004A4303 /* TFWebViewController.h */,
 				86AF882710D09F02004A4303 /* TFWebViewController.m */,
 				86AF882810D09F02004A4303 /* TFWebViewController.xib */,
+				86E22FEC10E1AD04004FBBEE /* TFNewsListTableViewController.h */,
+				86E22FED10E1AD04004FBBEE /* TFNewsListTableViewController.m */,
+				86E2301610E1B277004FBBEE /* TFNewsDetailTableViewController.h */,
+				86E2301710E1B277004FBBEE /* TFNewsDetailTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +272,8 @@
 				86AF87FF10D091DB004A4303 /* TFAppHelpers.m in Sources */,
 				86AF881910D09ADC004A4303 /* TFThumbnailViewController.m in Sources */,
 				86AF882910D09F02004A4303 /* TFWebViewController.m in Sources */,
+				86E22FEE10E1AD04004FBBEE /* TFNewsListTableViewController.m in Sources */,
+				86E2301810E1B277004FBBEE /* TFNewsDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
